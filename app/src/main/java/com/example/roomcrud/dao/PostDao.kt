@@ -27,9 +27,9 @@ interface PostDao {
     @Query("DELETE FROM posts_table")
     suspend fun deleteAllPosts()
 
-    @Query("UPDATE posts_table SET upvotes = upvotes + 1 WHERE id = :postId")
-    suspend fun upvotePost(postId: Int)
+    @Update
+    suspend fun upvotePost(post: Post)
 
-    @Query("UPDATE posts_table SET downvotes = downvotes + 1 WHERE id = :postId")
-    suspend fun downvotePost(postId: Int)
+    @Update
+    suspend fun downvotePost(post: Post)
 }

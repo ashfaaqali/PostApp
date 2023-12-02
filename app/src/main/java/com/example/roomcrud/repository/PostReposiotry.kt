@@ -23,11 +23,11 @@ class PostRepository(private val postDao: PostDao) {
         postDao.deleteAllPosts()
     }
 
-    suspend fun upvotePost(postId: Int) {
-        postDao.upvotePost(postId)
+    suspend fun upvotePost(post: Post) {
+        postDao.upvotePost(post)
     }
 
-    suspend fun downvotePost(postId: Int) {
-        postDao.downvotePost(postId)
+    suspend fun downvotePost(post: Post) {
+        postDao.downvotePost(post)
     }
 }

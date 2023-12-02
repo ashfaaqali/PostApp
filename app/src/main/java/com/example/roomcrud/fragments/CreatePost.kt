@@ -30,8 +30,6 @@ class CreatePost : Fragment() {
         binding = FragmentCreatePostBinding.inflate(layoutInflater)
         initUi()
 
-        // Create object of Post
-        post = Post(0, "", "", "", getCreationDate())
         mPostViewModel = ViewModelProvider(this)[PostViewModel::class.java]
 
         binding.submitBtn.setOnClickListener{
@@ -56,7 +54,7 @@ class CreatePost : Fragment() {
         if (inputCheck(postTitle, postDescription, authorName)){
 
             //Create Post object
-            val post = Post(0, postTitle, postDescription, authorName, getCreationDate())
+            val post = Post(0, postTitle, postDescription, authorName, getCreationDate(), 0, 0)
 
             // Add data to database
             mPostViewModel.createPost(post)

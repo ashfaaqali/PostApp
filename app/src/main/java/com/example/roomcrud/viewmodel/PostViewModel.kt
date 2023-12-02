@@ -47,15 +47,15 @@ class PostViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    fun upvotePost(postId: Int) {
+    fun upvotePost(post: Post) {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.upvotePost(postId)
+            repository.upvotePost(post)
         }
     }
 
-    fun downvotePost(postId: Int) {
+    fun downvotePost(post: Post) {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.downvotePost(postId)
+            repository.downvotePost(post)
         }
     }
 }

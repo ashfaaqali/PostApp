@@ -45,13 +45,13 @@ class PostAdapter(private val viewModelStoreOwner: ViewModelStoreOwner) : Recycl
             upvoteIcon.setOnClickListener{
                 currentItem.upvotes++
                 upvoteCount.text = currentItem.upvotes.toString()
-                mPostViewModel.updatePost(currentItem)
+                mPostViewModel.upvotePost(currentItem)
             }
 
             downvoteIcon.setOnClickListener{
                 currentItem.downvotes++
                 downvoteCount.text = currentItem.downvotes.toString()
-                mPostViewModel.updatePost(currentItem)
+                mPostViewModel.downvotePost(currentItem)
             }
         }
     }

@@ -43,11 +43,13 @@ class EditPost : Fragment() {
         val postDescription = binding.updateDescTextInput.text.toString()
         val authorName = binding.updateAuthorTextInput.text.toString()
         val creationDate = args.currentPost.creationDate
+        val currentUpVoteCount = args.currentPost.upvotes
+        val currentDownVoteCount = args.currentPost.downvotes
 
         if (inputCheck(postTitle, postDescription, authorName)) {
             //Create Post object
             val updatedData =
-                Post(args.currentPost.id, postTitle, postDescription, authorName, creationDate)
+                Post(args.currentPost.id, postTitle, postDescription, authorName, creationDate, currentUpVoteCount, currentDownVoteCount)
             // Add data to database
             mPostViewModel.updatePost(updatedData)
             Toast.makeText(requireContext(), "Successfully updated!", Toast.LENGTH_SHORT).show()
