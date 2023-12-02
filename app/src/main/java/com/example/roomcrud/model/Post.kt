@@ -14,6 +14,6 @@ data class Post(
     val postDescription: String,
     val authorName: String,
     val creationDate: String,
-    var upvotes: Int = 0,
-    var downvotes: Int = 0
+    var upvotes: Int,
+    var downvotes: Int
 ): Parcelable
