@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/allPosts">
+
+    <fragment
+        android:id="@+id/allPosts"
+        android:name="com.example.roomcrud.fragments.AllPosts"
+        android:label="fragment_all_posts"
+        tools:layout="@layout/fragment_all_posts" >
+        <action
+            android:id="@+id/action_allPosts_to_createPost"
+            app:destination="@id/createPost" />
+        <action
+            android:id="@+id/action_allPosts_to_viewPost"
+            app:destination="@id/viewPost" />
+    </fragment>
+    <fragment
+        android:id="@+id/createPost"
+        android:name="com.example.roomcrud.fragments.CreatePost"
+        android:label="fragment_create_post"
+        tools:layout="@layout/fragment_create_post" >
+        <action
+            android:id="@+id/action_createPost_to_allPosts"
+            app:destination="@id/allPosts" />
+    </fragment>
+    <fragment
+        android:id="@+id/editPost"
+        android:name="com.example.roomcrud.fragments.EditPost"
+        android:label="fragment_edit_post">
+        <action
+            android:id="@+id/action_editPost_to_allPosts"
+            app:destination="@id/allPosts" />
+        <argument
+            android:name="currentPost"
+            app:argType="com.example.roomcrud.model.Post" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPost"
+        android:name="com.example.roomcrud.fragments.ViewPost"
+        android:label="fragment_view_post"
+        tools:layout="@layout/fragment_view_post" >
+        <action
+            android:id="@+id/action_viewPost_to_allPosts"
+            app:destination="@id/allPosts" />
+        <action
+            android:id="@+id/action_viewPost_to_updatePost"
+            app:destination="@id/editPost" />
+        <argument
+            android:name="currentPost"
+            app:argType="com.example.roomcrud.model.Post" />
+    </fragment>
+</navigation>

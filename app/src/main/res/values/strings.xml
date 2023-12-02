@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RoomCRUD</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="jon_snow">Jon Snow, born Aegon Targaryen, is the son of Lyanna Stark and Rhaegar Targaryen, the late Prince of Dragonstone.</string>
+    <string name="the_last_targaryen">The Last Targaryen</string>
+    <string name="long_text">In the Game of Thrones television series, Jon\'s storyline follows the character\'s plot arc from the novel series, though seasons 6–8 continue on from the events of Martin\'s latest published installment, detailing Jon\'s resurrection, and revealing him to have been born Aegon Targaryen, the legitimate son of Rhaegar Targaryen.</string>
+</resources>
