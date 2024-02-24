@@ -1,4 +1,4 @@
-# RoomCrudApp
+# PostApp
 
 ## Screenshots
 
